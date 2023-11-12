@@ -35,11 +35,11 @@ import Head from 'next/head';
             </Head>
             <h3>Image Details</h3>
             <div className='d-flex align-items-center'>
-                <img src={item.image} width={200} height={200}/>
+                {/* <img src={item.image} width={200} height={200}/> */}
                 <div className='ms-3 '>
-                        <p>Name : {item.name}</p>
-                        <p>Created At {item.creationAt}</p>
-                        <p>Updated  At {item.updatedAt}</p>
+                        <p>Name : my Imges</p>
+                        <p>Created At 2013</p>
+                        <p>Updated  At 2023</p>
                         <button type="submit" class="btn  pull-righ mb-3" id="btnContactUs">donwlod</button>
 
                 </div>
