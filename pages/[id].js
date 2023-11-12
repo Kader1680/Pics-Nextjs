@@ -33,7 +33,7 @@ import Head from 'next/head';
             </Head>
             <h3>Product / Item</h3>
             <div className='d-flex align-items-center'>
-                {/* <img src={item.image} width={200} height={200}/> */}
+                <img src={item.image} width={200} height={200}/>
                 <div className='ms-3 '>
                         {/* <p>Name : {item.name}</p> */}
                         {/* <p>Created At {item.creationAt}</p> */}
