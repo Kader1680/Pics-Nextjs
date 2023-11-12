@@ -19,7 +19,7 @@ const Navbar = () => {
             <ul class="menu-items">
                 <li><Link style={{ textDecoration: "none" }} href ="/">Home</Link></li>
                 <li><Link style={{ textDecoration: "none" }} href ="/about">About</Link></li>
-                <li><Link style={{ textDecoration: "none" }} href ="images/images">Images</Link></li>
+                <li><Link style={{ textDecoration: "none" }} href ="/images">Images</Link></li>
                 <li><Link style={{ textDecoration: "none" }} href ="/contact">Contact</Link></li>
                 
             </ul>

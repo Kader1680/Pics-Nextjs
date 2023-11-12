@@ -154,10 +154,7 @@ export default function Home({allAlbums}) {
                   {
                     pics.map(item =>{
                       return(
-                        <Link href = {"/" + item.id}>
-                        
-                            <img src={item.image} />
-                        </Link>
+                        <img src={item.image} />
                       )
                     })
                   }
@@ -172,7 +169,7 @@ export default function Home({allAlbums}) {
                       allAlbums.map((album, index) => {
                         if (index <= 7) {
                           return(
-                            <Link href={"/images/" + album.id}  key={album.id}>
+                            <Link href={"/" + album.id}  key={album.id}>
                               <img   src={album.image} />
                 
                             </Link>
