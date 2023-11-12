@@ -20,7 +20,6 @@ const Navbar = () => {
                 <li><Link style={{ textDecoration: "none" }} href ="/">Home</Link></li>
                 <li><Link style={{ textDecoration: "none" }} href ="/about">About</Link></li>
                 <li><Link style={{ textDecoration: "none" }} href ="images/images">Images</Link></li>
-                <li><Link style={{ textDecoration: "none" }} href ="/photoMen/a">Photograph</Link></li>
                 <li><Link style={{ textDecoration: "none" }} href ="/contact">Contact</Link></li>
                 
             </ul>
