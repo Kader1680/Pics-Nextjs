@@ -3,13 +3,13 @@ import React from 'react'
 
 // import dataPics from "../dataPics"
 export const getServerSideProps = async () => {
-    const res = await fetch('https://api.escuelajs.co/api/v1/categories'); 
-    const allAlbums = await res.json(); 
-  return { 
-      props: { 
-        allAlbums: allAlbums
-      } 
-  } 
+  const res = await fetch('https://api.escuelajs.co/api/v1/categories'); 
+  const allAlbums = await res.json(); 
+return { 
+    props: { 
+      allAlbums: allAlbums
+    } 
+} 
 }   
 const  images = ({allAlbums}) => {
   return (

@@ -1,6 +1,18 @@
 import Head from 'next/head';
     import React from 'react'
     
+    
+    export const getStaticProps = async ({params}) => {
+        const res = await fetch(`https://api.escuelajs.co/api/v1/categories/${params.id}`);
+        const data = await res.json();
+        // console.log(params)
+        // console.log(data)
+        return{
+            props: {item: data}
+        }
+    }
+    
+
     export const getStaticPaths = async () =>{
         const res = await fetch('https://api.escuelajs.co/api/v1/categories/');
         const prod = await res.json();
@@ -13,16 +25,6 @@ import Head from 'next/head';
             fallback: true,
         }
     }
-    export const getStaticProps = async ({params}) => {
-        const res = await fetch(`https://api.escuelajs.co/api/v1/categories/${params.id}`);
-        const data = await res.json();
-        // console.log(params)
-        // console.log(data)
-        return{
-            props: {item: data}
-        }
-    }
-    
     const product = ({item}) => {
       return (
         <div >
@@ -31,13 +33,13 @@ import Head from 'next/head';
                     Pics | Details
                 </title>
             </Head>
-            <h3>Product / Item</h3>
+            <h3>Image Details</h3>
             <div className='d-flex align-items-center'>
                 <img src={item.image} width={200} height={200}/>
                 <div className='ms-3 '>
-                        {/* <p>Name : {item.name}</p> */}
-                        {/* <p>Created At {item.creationAt}</p> */}
-                        {/* <p>Updated  At {item.updatedAt}</p> */}
+                        <p>Name : {item.name}</p>
+                        <p>Created At {item.creationAt}</p>
+                        <p>Updated  At {item.updatedAt}</p>
                         <button type="submit" class="btn  pull-righ mb-3" id="btnContactUs">donwlod</button>
 
                 </div>
