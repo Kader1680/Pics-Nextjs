@@ -82,121 +82,133 @@ export default function Home({allAlbums}) {
 
         <div class="Container">
                   <div className='Home'>
-                  {/* <FilterBars /> */}
-                  <div className='mt-4 d-flex'>
-                        <nav role="navigation" class="primary-navigation">
-                                <ul onClick = {()=>{setpics(dataPics)}}>
-                                   <Image style={{ width:"25px", height:"25px" }} width={50} height={60} src="/all.png" />
-                                   all Images
-                                </ul>
-                          </nav>
-                          <nav role="navigation" class="primary-navigation">
-                                <ul>
-                                  <li>
-                                  <div class = "d-flex align-items-center">
-                                  <div className=' d-flex'>
-                                   <Image style={{ width:"25px", height:"25px" }} width={50} height={60} src="/picture.png" />
-                                    <p>color</p>
-                                  </div>
+                      <div className='filter mt-4 d-flex'>
+                            <nav role="navigation" class="primary-navigation">
+                                    {/* <ul onClick = {()=>{setpics(dataPics)}}>
+                                      <Image style={{ width:"25px", height:"25px" }} width={50} height={60} src="/all.png" />
+                                      all Images
+                                    </ul> */}
 
-                                  <i class="fa-solid fa-angle-down mt-2"></i>
-                                  </div>
-                                                                  
-                                    <ul class="dropdown">
-                                      <li onClick = {()=> FilterTap("color")} >Color Orignl</li>
-                                      <li onClick = {()=> FilterTap("WhiteBlack")}>Black & White</li>
-                                      
+                                    <ul onClick = {()=>{setpics(dataPics)}}>
+                                      <li>
+                                      <div class = "d-flex align-items-center">
+                                          <div className=' d-flex'>
+                                          <Image style={{ width:"25px", height:"25px" }} width={50} height={60} src="/picture.png" />
+                                            <p style={{ fontSize:"15px" }}>All Pics</p>
+                                          </div>
+
+                                          
+                                      </div>
+                                      </li>
                                     </ul>
-                                  </li>
-                                </ul>
-                          </nav>
+                              </nav>
+                              <nav role="navigation" class="primary-navigation">
+                                    <ul>
+                                      <li>
+                                      <div class = "d-flex align-items-center">
+                                          <div className=' d-flex'>
+                                          <Image style={{ width:"25px", height:"25px" }} width={50} height={60} src="/picture.png" />
+                                            <p style={{ fontSize:"15px" }} >color</p>
+                                          </div>
 
-
-                          <nav role="navigation" class="primary-navigation ms-3">
-                                <ul>
-                                  <li>
-                                  <div class = "d-flex align-items-center">
-                                  <div className=' d-flex'>
-                                   <Image style={{ width:"25px", height:"25px" }} width={50} height={60} src="/png-file.png" />
-                                    <p>Type</p>
-                                  </div>
-
-                                  <i class="fa-solid fa-angle-down mt-2"></i>
-                                  </div>
-                                                                  
-                                    <ul class="dropdown">
-                                      <li onClick = {()=> FilterType("png")} >png</li>
-                                      <li onClick = {()=> FilterType("jpg")} >jpg</li>
-                                      <li onClick = {()=> FilterType("gif")} >gif</li>
-                                      <li onClick = {()=> FilterType("webp")}>webp</li>
-                                      
+                                          <i class="fa-solid fa-angle-down"></i>
+                                      </div>
+                                                                      
+                                        <ul class="dropdown">
+                                          <li onClick = {()=> FilterTap("color")} >Color Orignl</li>
+                                          <li onClick = {()=> FilterTap("WhiteBlack")}>Black & White</li>
+                                          
+                                        </ul>
+                                      </li>
                                     </ul>
-                                  </li>
-                                </ul>
-                          </nav>
+                              </nav>
 
 
+                              <nav role="navigation" class="primary-navigation">
+                                    <ul>
+                                      <li>
+                                      <div class = "d-flex align-items-center">
+                                      <div className=' d-flex'>
+                                      <Image style={{ width:"25px", height:"25px" }} width={50} height={60} src="/png-file.png" />
+                                        <p style={{ fontSize:"15px" }}>Type</p>
+                                      </div>
 
-                          <nav role="navigation" class="primary-navigation">
-                                <ul>
-                                  <li>
-                                  <div class = "d-flex align-items-center">
-                                  <div className=' d-flex'>
-                                   <Image style={{ width:"25px", height:"25px" }} width={50} height={60} src="/price-tag.png" />
-                                    <p>Price</p>
-                                  </div>
-
-                                  <i class="fa-solid fa-angle-down mt-2"></i>
-                                  </div>
-                                                                  
-                                    <ul class="dropdown">
-                                      <li onClick = {()=> FilterPrice("free")} >Free </li>
-                                      <li onClick = {()=> FilterPrice("primuim")}>Primuim</li>
-                                      
+                                      <i class="fa-solid fa-angle-down"></i>
+                                      </div>
+                                                                      
+                                        <ul class="dropdown">
+                                          <li onClick = {()=> FilterType("png")} >png</li>
+                                          <li onClick = {()=> FilterType("jpg")} >jpg</li>
+                                          <li onClick = {()=> FilterType("gif")} >gif</li>
+                                          <li onClick = {()=> FilterType("webp")}>webp</li>
+                                          
+                                        </ul>
+                                      </li>
                                     </ul>
-                                  </li>
-                                </ul>
-                          </nav>
-
-                    </div>
+                              </nav>
 
 
 
-                  <div class= "allImages">
-                  {
-                    pics.map(item =>{
-                      return(
-                        <img src={item.image} />
-                      )
-                    })
-                  }
-                 
-                  
-                  </div>
-                  <hr></hr>
-                  <h2 className=' text-center'>Images Details</h2>
-                  <hr></hr>
-                  <div class= "allImages">
+                              <nav role="navigation" class="primary-navigation">
+                                    <ul>
+                                      <li>
+                                      <div class = "d-flex align-items-center">
+                                      <div className=' d-flex'>
+                                      <Image style={{ width:"25px", height:"25px" }} width={50} height={60} src="/price-tag.png" />
+                                        <p style={{ fontSize:"15px" }} >Price</p>
+                                      </div>
+
+                                      <i class="fa-solid fa-angle-down"></i>
+                                      </div>
+                                                                      
+                                        <ul class="dropdown">
+                                          <li onClick = {()=> FilterPrice("free")} >Free </li>
+                                          <li onClick = {()=> FilterPrice("primuim")}>Primuim</li>
+                                          
+                                        </ul>
+                                      </li>
+                                    </ul>
+                              </nav>
+
+                      </div>
+
+
+
+                      <div class= "allImages">
                       {
-                      allAlbums.map((album, index) => {
-                        if (index <= 7) {
+                        pics.map(item =>{
                           return(
-                            <Link href={"/" + album.id}  key={album.id}>
-                              <img   src={album.image} />
-                
-                            </Link>
-                                )
-                        }
+                            <img src={item.image} />
+                          )
+                        })
+                      }
+                    
                       
-                      }) 
+                      </div>
+                      <hr></hr>
+                      <h2 className=' text-center'>Images Details</h2>
+                      <hr></hr>
+                      <div class= "allImages">
+                          {
+                          allAlbums.map((album, index) => {
+                            if (index <= 7) {
+                              return(
+                                <Link href={"/" + album.id}  key={album.id}>
+                                  <img   src={album.image} />
+                    
+                                </Link>
+                                    )
+                            }
+                          
+                          }) 
 
 
-                      } 
-                  
+                          } 
+                      
+                      </div>
+
+
                   </div>
-
-
-        </div>
           
     
         </div>

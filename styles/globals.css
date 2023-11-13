@@ -356,24 +356,17 @@ select:hover{
   nav.primary-navigation ul li {
     background-color: #f4f4f4;
     border: none;
-    padding: 5px 20px;
+    /* padding: 5px 20px; */
     transition: .5s;
     font-weight: 500;
     display: inline-block;
-    padding: 0 30px;
+    padding: 0px 30px;
     position: relative;
     text-decoration: none;
     text-align: center;
-    width: 100px;
-    /* list-style: none;
-    margin: 0 auto;
-    
-    display: inline-block;
-    padding: 0 30px;
-    position: relative;
-    text-decoration: none;
-    text-align: center;
-    font-family: arvo; */
+    width: 135px;
+    padding-top: 10px;
+   
   }
   nav.primary-navigation li a {
     color: black;
@@ -436,4 +429,29 @@ select:hover{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+  }
+
+
+  .primary-navigation ul li div i{
+    margin-top: -13px;
+    margin-left: 1rem;
+  }
+
+  @media(max-width:767px){
+    .allImages{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .allImages img{
+        width: 10rem;
+        height: 10rem;
+    }
+    .filter{
+        flex-wrap: wrap;
+    }
+  }
+
+  .filter{
+    margin: auto;
+    width: min-content;
   }
