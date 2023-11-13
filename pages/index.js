@@ -5,7 +5,8 @@ import Navbar from '../components/Navbar'
 import {dataPics} from "../dataPics"
 import Link from 'next/link'
 import FilterBars from '../components/FilterBars'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import Loding from '../components/Loding'
 // import styles from '@/styles/Home.module.css'
 
 // const inter = Inter({ subsets: ['latin'] })
@@ -58,7 +59,17 @@ export default function Home({allAlbums}) {
 
   }
 
-
+  const [loading, setloading] = useState(true);
+  useEffect(() => {
+    
+    setTimeout(() => {
+      setloading(false)
+    }, 3000);
+  }, []);
+  if (loading) {
+        
+        return <Loding />
+  }
   return (
     <>
         <Head>
@@ -68,6 +79,7 @@ export default function Home({allAlbums}) {
             <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
             <title>Pics | Home</title>
         </Head>
+
         <div class="Container">
                   <div className='Home'>
                   {/* <FilterBars /> */}
