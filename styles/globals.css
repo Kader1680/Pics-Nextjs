@@ -441,6 +441,8 @@ select:hover{
     .allImages{
         display: grid;
         grid-template-columns: 50% 50%;
+        margin: auto;
+        width: fit-content;
     }
     .allImages img{
         width: 10rem;
@@ -454,4 +456,7 @@ select:hover{
   .filter{
     margin: auto;
     width: min-content;
+  }
+  .dropdown{
+    z-index: 5;
   }
